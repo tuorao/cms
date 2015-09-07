@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by Administrator on 2015-09-07.
  */
 @Repository
-public class TestDao {
+public class TestDao{
 
     @Autowired
     SqlSession sqlSession;

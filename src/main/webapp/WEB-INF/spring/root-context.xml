@@ -20,7 +20,7 @@
 
     <!-- 마이바티스는  스프링 트랜잭션 리소스처럼 동작,스프링은 이미 설정된 트랜잭션을
     사용해서 SqlSession을 동작중인 트랜잭션에 넣는다.  -->
-    <tx:annotation-driven />
+    <tx:annotation-driven/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
@@ -35,9 +35,11 @@
         <property name="mapperLocations" value="classpath:/database/*.xml"/>
         <property name="configLocation" value="/WEB-INF/spring/mybatis/mybatis-config.xml"/>
         <property name="transactionFactory">
+
+
             <bean class="org.mybatis.spring.transaction.SpringManagedTransactionFactory">
-                <constructor-arg index="0" ref="dataSource"/>
             </bean>
+
             <!-- <bean
                 class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" /> -->
         </property>
