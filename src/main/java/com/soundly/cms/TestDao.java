@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 public class TestDao extends SqlSessionDaoSupport {
 
     public TestDTO sel(){
-        return (TestDTO) getSqlSession().selectOne("test.sel");
+        return getSqlSession().selectOne("test.sel");
     }
 }
